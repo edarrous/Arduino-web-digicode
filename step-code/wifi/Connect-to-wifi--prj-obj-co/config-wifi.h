@@ -1,0 +1,2 @@
+#define SECRET_SSID "HUAWEI Edouard"
+#define SECRET_PASS "DGMYX34XK2M1"
