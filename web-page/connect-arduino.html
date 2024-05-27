@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Arduino connect screen</title>
+    <style>
+        :root{
+            --indicator-inactive: #CBD2E0;
+        }
+        .logo-arduino{
+            width: 6rem;
+            height: 6rem;
+        }
+
+        header{
+            display: flex;
+            justify-content: center;
+        }
+
+        .indicator{
+            width: 0.8rem;
+            height: 0.8rem;
+            background-color: var(--indicator-inactive);
+            border-radius: 0.5rem;
+        }
+    </style>
+</head>
+<body>
+    <header>
+        <img src="https://cdn.shopify.com/s/files/1/0438/4735/2471/files/Arduino_RGB_Pantone_9a224c8c-5d1d-4e5a-8e26-db3aec5ea7db.png?v=1637755799" alt="logo arduino" class="logo-arduino">
+    </header>
+    <main>
+          <h1>Enter Pin</h1>
+          <section>
+            <article class="indicator"></article>
+            <article class="indicator"></article>
+            <article class="indicator"></article>
+            <article class="indicator"></article>
+          </section>
+          <section>
+            <article>
+                <p>1</p>
+                <p>2</p>
+                <p>3</p>
+            </article>
+            <article>
+                <p>4</p>
+                <p>5</p>
+                <p>6</p>
+            </article>
+            <article>
+                <p>7</p>
+                <p>8</p>
+                <p>9</p>
+            </article>
+            <article>
+                <p>0</p>
+            </article>
+          </section>
+          <p>Forgot your Pin Code ?</p>
+    </main>
+    
+</body>
+</html>
