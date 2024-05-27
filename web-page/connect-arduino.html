@@ -127,19 +127,15 @@
 
     <!-- Script JS -->
     <script>
-        function numberClicked(){
-            
-        }
-
-       $(function() {                       //run when the DOM is ready
-        $("#number-1").click(function() {  //use a class, since your ID gets mangled
+              $(function() {                       //run when the DOM is ready
+        $("button").click(function() {  //use a class, since your ID gets mangled
             $(this).addClass("active-number");      //add the class to the clicked element
             $(this).removeClass("digit-number-text");
             console.log("1 was pressed");
             window.setTimeout(function(){
-                $("#number-1").removeClass("active-number");
-                $("#number-1").addClass("digit-number-text");
-                console.log("test");
+                $("button").removeClass("active-number");
+                $("button").addClass("digit-number-text");
+                console.log("return");
             },500);
             return;
   });
@@ -160,23 +156,23 @@
           </section>
           <section class="digit">
             <article class="digit-row">
-                <button class="digit-number-text digit-number-layout" id="number-1">1</button>
-                <button class="digit-number-text digit-number-layout" id="number">2</button>
-                <button class="digit-number-text digit-number-layout" id="number">3</button>
+                <button class="digit-number-text digit-number-layout" onclick="addNumber(1)">1</button>
+                <button class="digit-number-text digit-number-layout" onclick="addNumber(2)">2</button>
+                <button class="digit-number-text digit-number-layout" onclick="addNumber(3)">3</button>
             </article>
             <article class="digit-row">
-                <button class="digit-number-text digit-number-layout" id="number">4</button>
-                <button class="digit-number-text digit-number-layout" id="number">5</button>
-                <button class="digit-number-text digit-number-layout" id="number">6</button>
+                <button class="digit-number-text digit-number-layout" onclick="addNumber(4)">4</button>
+                <button class="digit-number-text digit-number-layout" onclick="addNumber(5)">5</button>
+                <button class="digit-number-text digit-number-layout" onclick="addNumber(6)">6</button>
             </article>
             <article class="digit-row">
-                <button class="digit-number-text digit-number-layout" id="number">7</button>
-                <button class="digit-number-text digit-number-layout" id="number">8</button>
-                <button class="digit-number-text digit-number-layout" id="number">9</button>
+                <button class="digit-number-text digit-number-layout" onclick="addNumber(7)">7</button>
+                <button class="digit-number-text digit-number-layout" onclick="addNumber(8)">8</button>
+                <button class="digit-number-text digit-number-layout" onclick="addNumber(9)">9</button>
             </article>
             <article class="digit-row">
                 <button class="digit-number-layout"></button>
-                <button class="digit-number-text digit-number-layout" id="number">0</button>
+                <button class="digit-number-text digit-number-layout" onclick="addNumber(0)">0</button>
                 <button class="digit-number-layout"></button>
             </article>
           </section>
