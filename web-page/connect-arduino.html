@@ -153,17 +153,21 @@
   });
 });
     </script>
+    <!-- Script JS Digicode -->
     <script>
+        // Définir variables
         let generatedPin = "1249";
         let enteredPin = "";
         let entryCount = 0;
 
+        // Définition fonction addNumber
         function addNumber(num) {
             enteredPin += num;
             document.getElementById('enteredPin').value = enteredPin;
             console.log(enteredPin);
             entryCount ++;
             console.log(entryCount);
+            //vérifier si le code entré est le même que celui prévu
             if (enteredPin === generatedPin) {
                 console.log("Mot de passe trouvé");
                 $(".indicator").addClass("indicator-true");
@@ -172,6 +176,7 @@
             } else {
                 console.log("mot de passe faux");
             }
+            // Vérifier le nombre de chiffres entrés
             if (entryCount == 1){
                 console.log("1 entrée");
                 $("#indicator-1").addClass("indicator-active");
@@ -191,6 +196,7 @@
             return;
         }
 
+        // Fonction pour remettre à zéro le digicode
         function clearInput() {
             enteredPin = "";
             entryCount = 0;
@@ -202,7 +208,7 @@
         }
         
     </script>
-
+<!-- Scructure HTML de la page web -->
 </head>
 <body>
     <header>
