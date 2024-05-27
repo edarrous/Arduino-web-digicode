@@ -453,7 +453,7 @@ https://github.com/edarrous/Arduino-web-digicode.git
 
 
 
-<img src="/README.assets/image-20240528012538513-1716852581734-16.png" alt="image-20240528012538513" style="zoom:33%;" /><img src="/README.assets/image-20240528012854309-1716852940165-20.png" alt="image-20240528012854309" style="zoom:10%;" />
+<img src="/README.assets/image-20240528012538513-1716852581734-16.png" alt="image-20240528012538513" style="zoom:25%;" /><img src="/README.assets/image-20240528012854309-1716852940165-20.png" alt="image-20240528012854309" style="zoom:10%;" />
 
 
 
