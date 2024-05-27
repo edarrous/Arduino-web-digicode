@@ -87,6 +87,7 @@
             font-style: normal;
             font-weight: 600;
             line-height: 150%;
+            transition: all 300ms;
         }
 
         .digit-number-layout{
@@ -117,11 +118,32 @@
             line-height: 150%;
             opacity: 0.6;
         }
+
+        .active-number{
+            color: aqua;
+            box-flex-group: pink;
+        }
     </style>
 
     <!-- Script JS -->
     <script>
+        function numberClicked(){
+            
+        }
 
+       $(function() {                       //run when the DOM is ready
+        $("#number-1").click(function() {  //use a class, since your ID gets mangled
+            $(this).addClass("active-number");      //add the class to the clicked element
+            $(this).removeClass("digit-number-text");
+            console.log("1 was pressed");
+            window.setTimeout(function(){
+                $("#number-1").removeClass("active-number");
+                $("#number-1").addClass("digit-number-text");
+                console.log("test");
+            },500);
+            return;
+  });
+});
     </script>
 </head>
 <body>
@@ -138,7 +160,7 @@
           </section>
           <section class="digit">
             <article class="digit-row">
-                <button class="digit-number-text digit-number-layout" id="number">1</button>
+                <button class="digit-number-text digit-number-layout" id="number-1">1</button>
                 <button class="digit-number-text digit-number-layout" id="number">2</button>
                 <button class="digit-number-text digit-number-layout" id="number">3</button>
             </article>
