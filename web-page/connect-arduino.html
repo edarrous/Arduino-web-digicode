@@ -8,14 +8,32 @@
         :root{
             --indicator-inactive: #CBD2E0;
         }
-        .logo-arduino{
-            width: 6rem;
-            height: 6rem;
-        }
 
         header{
             display: flex;
             justify-content: center;
+            margin-bottom: 1rem;
+        }
+
+        main{
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            gap: 2.5rem;
+        }
+
+        h1{
+            margin: 0;
+            font-family: Inter;
+            font-size: 1.25rem;
+            font-style: normal;
+            font-weight: 700;
+            line-height: 150%;
+        }
+
+        .logo-arduino{
+            width: 6rem;
+            height: 6rem;
         }
 
         .indicator{
@@ -24,6 +42,28 @@
             background-color: var(--indicator-inactive);
             border-radius: 0.5rem;
         }
+
+        .digit-row{
+            display: flex;
+            align-items: flex-start;
+            gap: 1.5rem;  
+        }
+
+        .digit{
+            display: inline-flex;
+            flex-direction: column;
+            align-items: flex-start;
+            gap: 1.5rem;
+        }
+
+        .steps{
+            display: inline-flex;
+            justify-content: center;
+            align-items: center;
+            gap: 1.5rem;
+        }
+
+
     </style>
 </head>
 <body>
@@ -32,29 +72,29 @@
     </header>
     <main>
           <h1>Enter Pin</h1>
-          <section>
+          <section class="steps">
             <article class="indicator"></article>
             <article class="indicator"></article>
             <article class="indicator"></article>
             <article class="indicator"></article>
           </section>
-          <section>
-            <article>
+          <section class="digit">
+            <article class="digit-row">
                 <p>1</p>
                 <p>2</p>
                 <p>3</p>
             </article>
-            <article>
+            <article class="digit-row">
                 <p>4</p>
                 <p>5</p>
                 <p>6</p>
             </article>
-            <article>
+            <article class="digit-row">
                 <p>7</p>
                 <p>8</p>
                 <p>9</p>
             </article>
-            <article>
+            <article class="digit-row">
                 <p>0</p>
             </article>
           </section>
