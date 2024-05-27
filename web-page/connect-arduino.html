@@ -5,8 +5,11 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Arduino connect screen</title>
     <style>
+    @import url('https://fonts.googleapis.com/css2?family=Inter:wght@100..900&display=swap');
+
         :root{
             --indicator-inactive: #CBD2E0;
+            --dark: #2D3648;
         }
 
         header{
@@ -22,8 +25,15 @@
             gap: 2.5rem;
         }
 
+        footer{
+            margin-top: 2rem;
+            display: flex;
+            justify-content: center;
+        }
+
         h1{
             margin: 0;
+            color: var(--dark);
             font-family: Inter;
             font-size: 1.25rem;
             font-style: normal;
@@ -37,8 +47,8 @@
         }
 
         .indicator{
-            width: 0.8rem;
-            height: 0.8rem;
+            width: 0.825rem;
+            height: 0.825rem;
             background-color: var(--indicator-inactive);
             border-radius: 0.5rem;
         }
@@ -53,7 +63,29 @@
             display: inline-flex;
             flex-direction: column;
             align-items: flex-start;
-            gap: 1.5rem;
+            gap: 1rem;
+        }
+
+        .digit-number-text{
+            color: var(--dark);
+            text-align: center;
+            /* Header - Medium */
+            font-family: Inter;
+            font-size: 1.5rem;
+            font-style: normal;
+            font-weight: 600;
+            line-height: 150%;
+        }
+
+        .digit-number-layout{
+            display: flex;
+            width: 5rem;
+            height: 2rem;
+            padding: 1.1875rem 0rem;
+            justify-content: center;
+            align-items: center;
+            border-radius: 2.5rem;
+            margin: 0;
         }
 
         .steps{
@@ -61,6 +93,17 @@
             justify-content: center;
             align-items: center;
             gap: 1.5rem;
+        }
+
+        .forgot-pass{
+            color: var(--dark);
+            text-align: center;
+            font-family: Inter;
+            font-size: 0.875rem;
+            font-style: normal;
+            font-weight: 700;
+            line-height: 150%;
+            opacity: 0.6;
         }
 
 
@@ -80,26 +123,29 @@
           </section>
           <section class="digit">
             <article class="digit-row">
-                <p>1</p>
-                <p>2</p>
-                <p>3</p>
+                <p class="digit-number-text digit-number-layout">1</p>
+                <p class="digit-number-text digit-number-layout">2</p>
+                <p class="digit-number-text digit-number-layout">3</p>
             </article>
             <article class="digit-row">
-                <p>4</p>
-                <p>5</p>
-                <p>6</p>
+                <p class="digit-number-text digit-number-layout">4</p>
+                <p class="digit-number-text digit-number-layout">5</p>
+                <p class="digit-number-text digit-number-layout">6</p>
             </article>
             <article class="digit-row">
-                <p>7</p>
-                <p>8</p>
-                <p>9</p>
+                <p class="digit-number-text digit-number-layout">7</p>
+                <p class="digit-number-text digit-number-layout">8</p>
+                <p class="digit-number-text digit-number-layout">9</p>
             </article>
             <article class="digit-row">
-                <p>0</p>
+                <p class="digit-number-layout"></p>
+                <p class="digit-number-text digit-number-layout">0</p>
+                <p class="digit-number-layout"></p>
             </article>
           </section>
-          <p>Forgot your Pin Code ?</p>
     </main>
-    
+    <footer>
+        <p class="forgot-pass">Forgot your Pin Code ?</p>
+    </footer>
 </body>
 </html>
