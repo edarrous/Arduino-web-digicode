@@ -1,12 +1,16 @@
+# Expérimentation digicode Arduino
+
 *Un projet de Lola de BOURGUES et Edouard DARROUSEZ  UX3B*
 
 ------
 
-# Sommaire
+## Sommaire
 
-# Introduction
+[TOC]
 
-## Consignes
+## Introduction
+
+### Consignes
 
 “La production attendue est la conception, la réalisation et la documentation d'un objet connecté exploitant une ou plusieurs ESP32.
 
@@ -14,33 +18,38 @@ Aussi, votre objet pourra supporter un usage sérieux ou réaliste. L'usage peut
 
 Ce qui est attendu dans ce projet n'est pas uniquement la réalisation du dispositif mais surtout sa documentation, c'est-à-dire un document contenant toutes les informations pour comprendre le projet et le reproduire.”
 
-## A propos
+### A propos
 
 Nous avons opté pour une approche expérimentale en matière de conception, qui se matérialise actuellement par une page internet verrouillée nécessitant l'entré d'un mot de passe. Lorsqu'un utilisateur saisit le mot de passe correct, un signal est instantanément transmis à la carte arduino. On peut alors imaginer de nombreux usages comme ouvrir un verrou connecté...
 
-## Inspirations
+### Inspirations
 
 Pour ce projet, nous nous sommes inspirés de plusieurs domaines et technologies comme le “CAPTCHA” est un mécanisme de sécurité utilisé sur les sites web pour différencier les utilisateurs humains des programmes automatisés, appelés bots. Ou alors des systèmes de paiement, qui quand la transaction est validée envoient un message au terminal pour déclencher une action.
 
-![Untitled](https://prod-files-secure.s3.us-west-2.amazonaws.com/6428e317-3d27-4455-af03-fe80b4e89c88/d9c4c7d4-97df-4b08-9c0a-af12e4cb79a0/Untitled.png)
 
-![Untitled](https://prod-files-secure.s3.us-west-2.amazonaws.com/6428e317-3d27-4455-af03-fe80b4e89c88/cb68c9a3-9895-4964-a124-f8e5aba16dad/Untitled.png)
 
-![Untitled](https://prod-files-secure.s3.us-west-2.amazonaws.com/6428e317-3d27-4455-af03-fe80b4e89c88/7d71afb8-e1fb-4653-ae6d-599785f946de/Untitled.png)
+[Arduino Hardware wallet - Using Arduino / Project Guidance - Arduino Forum](https://forum.arduino.cc/t/arduino-hardware-wallet/577425)
+[Arduino-Based Bitcoin Candy Vending Machine - Hackster.io](https://www.hackster.io/elkrem/arduino-based-bitcoin-candy-vending-machine-9f53d8)
 
-# Détails
+![image-20240528011255186](F:\edarr\OneDrive\Documents\2.L'école de design Nantes\A3\cours-objet-connecte\prj--arduino-obj-connecte\README.assets\image-20240528011255186.png)![image-20240528011305564](F:\edarr\OneDrive\Documents\2.L'école de design Nantes\A3\cours-objet-connecte\prj--arduino-obj-connecte\README.assets\image-20240528011305564.png)![image-20240528011314523](F:\edarr\OneDrive\Documents\2.L'école de design Nantes\A3\cours-objet-connecte\prj--arduino-obj-connecte\README.assets\image-20240528011314523.png)
 
-## Schéma d’usage
 
-![Untitled](https://prod-files-secure.s3.us-west-2.amazonaws.com/6428e317-3d27-4455-af03-fe80b4e89c88/f7752406-098c-401a-9de6-7da2ca72e130/Untitled.png)
 
-## Technique
 
-### Logigramme
 
-![Untitled](https://prod-files-secure.s3.us-west-2.amazonaws.com/6428e317-3d27-4455-af03-fe80b4e89c88/36c5244b-d8f9-443f-abfb-dc31fefc9551/Untitled.png)
+## Détails
 
-### Matériel nécessaire
+### Schéma d’usage
+
+![image-20240528011428765](F:\edarr\OneDrive\Documents\2.L'école de design Nantes\A3\cours-objet-connecte\prj--arduino-obj-connecte\README.assets\image-20240528011428765.png)
+
+### Technique
+
+#### Logigramme
+
+![image-20240528011439220](F:\edarr\OneDrive\Documents\2.L'école de design Nantes\A3\cours-objet-connecte\prj--arduino-obj-connecte\README.assets\image-20240528011439220.png)
+
+#### Matériel nécessaire
 
 - 1*Carte arduino
 - 1*Routeur
@@ -48,13 +57,13 @@ Pour ce projet, nous nous sommes inspirés de plusieurs domaines et technologies
 
 ## Réalisation
 
-## Schéma électronique
+### Schéma électronique
 
 Le schéma de montage de notre réalisation est assez simple, car, nous testons la réception du message uniquement avec l’allumage d’une Led.
 
-![Untitled](https://prod-files-secure.s3.us-west-2.amazonaws.com/6428e317-3d27-4455-af03-fe80b4e89c88/f1de7ff6-770a-4c09-9655-41fca7d6ecd8/Untitled.png)
+![image-20240528011449716](F:\edarr\OneDrive\Documents\2.L'école de design Nantes\A3\cours-objet-connecte\prj--arduino-obj-connecte\README.assets\image-20240528011449716.png)
 
-## Code
+### Code
 
 ```c
 // Charger la librairie Wifi 
@@ -178,7 +187,7 @@ void loop() {
 }
 ```
 
-### Code page web
+#### Code page web
 
 ```html
 <!-- setup page HTML -->
@@ -433,3 +442,31 @@ void loop() {
 Pour avoir accès au code :
 
 https://github.com/edarrous/Arduino-web-digicode.git
+
+
+
+---
+
+## Sources
+
+Ahmed, A. (2024, avril 9). *A Step-by-Step Guide To Generate and Validate 4-Digit PINs In JavaScript*. Codeconvey. https://codeconvey.com/a-step-by-step-guide-to-generate-and-validate-4-digit-pins-in-javascript/
+
+
+
+*Arduino—HTTP Request | Arduino Tutorial*. (s. d.-a). Arduino Getting Started. Consulté 28 mai 2024, à l’adresse https://arduinogetstarted.com/tutorials/arduino-http-request
+
+
+
+*Arduino—HTTP Request | Arduino Tutorial*. (s. d.-b). Arduino Getting Started. Consulté 27 mai 2024, à l’adresse https://arduinogetstarted.com/tutorials/arduino-http-request
+
+
+
+*ESP32 Web Server—Arduino IDE | Random Nerd Tutorials*. (s. d.). Consulté 28 mai 2024, à l’adresse https://randomnerdtutorials.com/esp32-web-server-arduino-ide/
+
+
+
+Rui Santos (Réalisateur). (2018). *Build an ESP32 Web Server with Arduino IDE*. https://www.youtube.com/watch?v=ApGwxX6VVzk
+
+
+
+Verstraete, A. (2018, janvier 6). *ESP32 Arduino HTTP Server : Serving HTML and JavaScript - techtutorialsx*. https://techtutorialsx.com/2018/01/06/esp32-arduino-http-server-serving-html-and-javascript/
