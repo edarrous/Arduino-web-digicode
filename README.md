@@ -31,7 +31,7 @@ Pour ce projet, nous nous sommes inspirés de plusieurs domaines et technologies
 [Arduino Hardware wallet - Using Arduino / Project Guidance - Arduino Forum](https://forum.arduino.cc/t/arduino-hardware-wallet/577425)
 [Arduino-Based Bitcoin Candy Vending Machine - Hackster.io](https://www.hackster.io/elkrem/arduino-based-bitcoin-candy-vending-machine-9f53d8)
 
-![image-20240528011255186](F:\edarr\OneDrive\Documents\2.L'école de design Nantes\A3\cours-objet-connecte\prj--arduino-obj-connecte\README.assets\image-20240528011255186.png)![image-20240528011305564](F:\edarr\OneDrive\Documents\2.L'école de design Nantes\A3\cours-objet-connecte\prj--arduino-obj-connecte\README.assets\image-20240528011305564.png)![image-20240528011314523](F:\edarr\OneDrive\Documents\2.L'école de design Nantes\A3\cours-objet-connecte\prj--arduino-obj-connecte\README.assets\image-20240528011314523.png)
+![image-20240528011255186](\README.assets\image-20240528011255186.png)![image-20240528011305564](\README.assets\image-20240528011305564.png)![image-20240528011314523](\README.assets\image-20240528011314523.png)
 
 
 
