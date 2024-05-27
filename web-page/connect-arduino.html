@@ -33,6 +33,7 @@
             margin-top: 2rem;
             display: flex;
             justify-content: center;
+            flex-direction: column;
         }
 
         h1{
@@ -123,24 +124,85 @@
             color: aqua;
             box-flex-group: pink;
         }
+
+        .new-input{
+            visibility: hidden;
+        }
+
+        .indicator-active{
+            background-color: blue;
+        }
+
+        .indicator-true{
+            background-color: #1ADE5D;
+        }
     </style>
 
-    <!-- Script JS -->
+    <!-- Script JS changer style boutons -->
     <script>
+
               $(function() {                       //run when the DOM is ready
         $("button").click(function() {  //use a class, since your ID gets mangled
             $(this).addClass("active-number");      //add the class to the clicked element
             $(this).removeClass("digit-number-text");
-            console.log("1 was pressed");
             window.setTimeout(function(){
                 $("button").removeClass("active-number");
                 $("button").addClass("digit-number-text");
-                console.log("return");
             },500);
             return;
   });
 });
     </script>
+    <script>
+        let generatedPin = "1249";
+        let enteredPin = "";
+        let entryCount = 0;
+
+        function addNumber(num) {
+            enteredPin += num;
+            document.getElementById('enteredPin').value = enteredPin;
+            console.log(enteredPin);
+            entryCount ++;
+            console.log(entryCount);
+            if (enteredPin === generatedPin) {
+                console.log("Mot de passe trouvé");
+                $(".indicator").addClass("indicator-true");
+                setTimeout(clearInput, 500);
+            } else {
+                console.log("mot de passe faux");
+            }
+            if (entryCount == 1){
+                console.log("1 entrée");
+                $("#indicator-1").addClass("indicator-active");
+            }
+            if (entryCount == 2){
+                console.log("2 entrée");
+                $("#indicator-2").addClass("indicator-active");
+            }if (entryCount == 3){
+                console.log("3 entrée");
+                $("#indicator-3").addClass("indicator-active");
+            }
+            if (entryCount == 4){
+                console.log("4 entrée");
+                $("#indicator-4").addClass("indicator-active");
+                setTimeout(clearInput, 500);
+            }
+            return;
+        }
+
+        function clearInput() {
+            enteredPin = "";
+            entryCount = 0;
+            document.getElementById('enteredPin').value = enteredPin;
+            console.log('clear');
+            $('.indicator').removeClass('indicator-active');
+            $('.indicator').removeClass('indicator-true');
+            return;
+        }
+        
+        
+    </script>
+
 </head>
 <body>
     <header>
@@ -149,10 +211,10 @@
     <main>
           <h1>Enter Pin</h1>
           <section class="steps">
-            <article class="indicator"></article>
-            <article class="indicator"></article>
-            <article class="indicator"></article>
-            <article class="indicator"></article>
+            <article class="indicator" id="indicator-1"></article>
+            <article class="indicator" id="indicator-2"></article>
+            <article class="indicator" id="indicator-3"></article>
+            <article class="indicator" id="indicator-4"></article>
           </section>
           <section class="digit">
             <article class="digit-row">
@@ -179,6 +241,7 @@
     </main>
     <footer>
         <p class="forgot-pass">Forgot your Pin Code ?</p>
+        <input type="text" id="enteredPin" class="new-input" readonly>
     </footer>
 </body>
 </html>
