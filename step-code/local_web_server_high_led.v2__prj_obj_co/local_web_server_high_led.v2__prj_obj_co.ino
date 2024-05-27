@@ -74,22 +74,10 @@ void loop(){
             client.println();
             
             // turns the GPIOs on and off
-            if (header.indexOf("GET /26/on") >= 0) {
-              Serial.println("GPIO 26 on");
+            if (header.indexOf("GET /mdp-true") >= 0) {
+              Serial.println("GPIO on");
               outputState = "on";
-              digitalWrite(output26, HIGH);
-            } else if (header.indexOf("GET /") >= 0) {
-              Serial.println("GPIO off");
-              outputState = "off";
-              digitalWrite(output26, LOW);
-            } else if (header.indexOf("GET /27/on") >= 0) {
-              Serial.println("GPIO 27 on");
-              output27State = "on";
-              digitalWrite(output27, HIGH);
-            } else if (header.indexOf("GET /27/off") >= 0) {
-              Serial.println("GPIO 27 off");
-              output27State = "off";
-              digitalWrite(output27, LOW);
+              digitalWrite(outputPin, HIGH);
             }
             
             // Display the HTML web page
