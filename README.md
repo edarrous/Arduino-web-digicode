@@ -198,10 +198,10 @@ void loop() {
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Arduino connect screen</title>
     <!-- import jquery -->
-    <script src="<https://ajax.googleapis.com/ajax/libs/jquery/3.7.1/jquery.min.js>"></script>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.7.1/jquery.min.js"></script>
 <!-- Style CSS -->
     <style>
-    @import url('<https://fonts.googleapis.com/css2?family=Inter:wght@100..900&display=swap>');
+    @import url('https://fonts.googleapis.com/css2?family=Inter:wght@100..900&display=swap');
 
         :root{
             --indicator-inactive: #CBD2E0;
@@ -345,17 +345,21 @@ void loop() {
   });
 });
     </script>
+    <!-- Script JS Digicode -->
     <script>
+        // Définir variables
         let generatedPin = "1249";
         let enteredPin = "";
         let entryCount = 0;
 
+        // Définition fonction addNumber
         function addNumber(num) {
             enteredPin += num;
             document.getElementById('enteredPin').value = enteredPin;
             console.log(enteredPin);
             entryCount ++;
             console.log(entryCount);
+            //vérifier si le code entré est le même que celui prévu
             if (enteredPin === generatedPin) {
                 console.log("Mot de passe trouvé");
                 $(".indicator").addClass("indicator-true");
@@ -364,6 +368,7 @@ void loop() {
             } else {
                 console.log("mot de passe faux");
             }
+            // Vérifier le nombre de chiffres entrés
             if (entryCount == 1){
                 console.log("1 entrée");
                 $("#indicator-1").addClass("indicator-active");
@@ -383,6 +388,7 @@ void loop() {
             return;
         }
 
+        // Fonction pour remettre à zéro le digicode
         function clearInput() {
             enteredPin = "";
             entryCount = 0;
@@ -394,11 +400,11 @@ void loop() {
         }
         
     </script>
-
+<!-- Scructure HTML de la page web -->
 </head>
 <body>
     <header>
-        <img src="<https://cdn.shopify.com/s/files/1/0438/4735/2471/files/Arduino_RGB_Pantone_9a224c8c-5d1d-4e5a-8e26-db3aec5ea7db.png?v=1637755799>" alt="logo arduino" class="logo-arduino">
+        <img src="https://cdn.shopify.com/s/files/1/0438/4735/2471/files/Arduino_RGB_Pantone_9a224c8c-5d1d-4e5a-8e26-db3aec5ea7db.png?v=1637755799" alt="logo arduino" class="logo-arduino">
     </header>
     <main>
           <h1>Enter Pin</h1>
@@ -442,6 +448,14 @@ void loop() {
 Pour avoir accès au code :
 
 https://github.com/edarrous/Arduino-web-digicode.git
+
+## Résultat 
+
+
+
+<img src="F:\edarr\OneDrive\Documents\2.L'école de design Nantes\A3\cours-objet-connecte\prj--arduino-obj-connecte\README.assets\image-20240528012538513-1716852581734-16.png" alt="image-20240528012538513" style="zoom:33%;" /><img src="F:\edarr\OneDrive\Documents\2.L'école de design Nantes\A3\cours-objet-connecte\prj--arduino-obj-connecte\README.assets\image-20240528012854309-1716852940165-20.png" alt="image-20240528012854309" style="zoom:10%;" />
+
+<video src="/README.assets/digicode-arduino--video-demo.mp4"></video>
 
 
 
