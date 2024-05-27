@@ -453,9 +453,9 @@ https://github.com/edarrous/Arduino-web-digicode.git
 
 
 
-<img src="F:\edarr\OneDrive\Documents\2.L'école de design Nantes\A3\cours-objet-connecte\prj--arduino-obj-connecte\README.assets\image-20240528012538513-1716852581734-16.png" alt="image-20240528012538513" style="zoom:33%;" /><img src="F:\edarr\OneDrive\Documents\2.L'école de design Nantes\A3\cours-objet-connecte\prj--arduino-obj-connecte\README.assets\image-20240528012854309-1716852940165-20.png" alt="image-20240528012854309" style="zoom:10%;" />
+<img src="/README.assets/image-20240528012538513-1716852581734-16.png" alt="image-20240528012538513" style="zoom:33%;" /><img src="/README.assets/image-20240528012854309-1716852940165-20.png" alt="image-20240528012854309" style="zoom:10%;" />
 
-<video src="/README.assets/digicode-arduino--video-demo.mp4"></video>
+
 
 
 
